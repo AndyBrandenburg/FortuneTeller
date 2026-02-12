@@ -32,7 +32,7 @@ public class FortuneTellerFrame extends JFrame {
         fortunes.add("I see something pleasant will happen to you in the near future.");
         fortunes.add("Believe in yourself and others will too.");
         fortunes.add("The harder you work, the luckier you get.");
-        fortunes.add("Don’t just spend time. Invest it.");
+        fortunes.add("Life is like a box of chocolates. You never know what you're gonna get.");
         fortunes.add("You will have good health in your future.");
     }
 
@@ -63,8 +63,7 @@ public class FortuneTellerFrame extends JFrame {
 
     public static void main(String[] args)
     {
-// The invokeLater method ensures the GUI is created on the
-// Event Dispatch Thread (EDT) to avoid thread interference.
+
         SwingUtilities.invokeLater(() -> {
             new FortuneTellerFrame();
         });
