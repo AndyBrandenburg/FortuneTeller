@@ -18,7 +18,7 @@ public class FortuneTellerFrame extends JFrame {
     JButton quitBtn;
     JButton fortuneBtn;
     JScrollPane scroller;
-    int curFortuneDex;
+    int curFortuneDex = -1;
 
     ArrayList<String> fortunes = new ArrayList<>();
     {
@@ -60,8 +60,14 @@ public class FortuneTellerFrame extends JFrame {
 
         setVisible(true);
     }
-    public static void main(String[] args) {
-        new FortuneTellerFrame();
+
+    public static void main(String[] args)
+    {
+// The invokeLater method ensures the GUI is created on the
+// Event Dispatch Thread (EDT) to avoid thread interference.
+        SwingUtilities.invokeLater(() -> {
+            new FortuneTellerFrame();
+        });
     }
 
     public void createTitlePanel(){
